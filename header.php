@@ -9,29 +9,23 @@
   <body>
 
     <header role="banner">
-      <h1><?php bloginfo('name'); ?></h1>
+
+      <h1 class="hidden"><?php bloginfo('name'); ?></h1>
 
       <nav role="navigation">
 
-        <h2><?php esc_html_e('Navigation', 'horoman'); ?></h2>
+        <h2 class="hidden"><?php esc_html_e('Navigation', 'horoman'); ?></h2>
 
-        <li class="menu-item menu-logo">
-          <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-        </li>
+        <ul id="menu-menu-al-centro" class="menu">
+          <li class="menu-item menu-logo">
+            <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
+              <span class="hidden"><?php bloginfo('name'); ?></span>
+            </a>
+          </li>
+        </ul>
 
-        <?php
-          wp_nav_menu(array(
-            'theme_location' => 'menu_left',
-            'items_wrap' => '%3$s'
-          ));
-        ?>
-
-        <?php
-          wp_nav_menu(array(
-            'theme_location' => 'menu_right',
-            'items_wrap' => '%3$s'
-          ));
-        ?>
+        <?php wp_nav_menu(array('theme_location' => 'menu_left')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'menu_right')); ?>
 
       </nav>
 
