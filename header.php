@@ -7,12 +7,32 @@
     <?php wp_head(); ?>
   </head>
   <body>
+
     <header role="banner">
-      <h1>
-        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-      </h1>
+      <h1><?php bloginfo('name'); ?></h1>
+
       <nav role="navigation">
+
         <h2><?php esc_html_e('Navigation', 'horoman'); ?></h2>
-        <?php wp_nav_menu(array('theme_location' => 'menu')); ?>
+
+        <li class="menu-item menu-logo">
+          <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+        </li>
+
+        <?php
+          wp_nav_menu(array(
+            'theme_location' => 'menu_left',
+            'items_wrap' => '%3$s'
+          ));
+        ?>
+
+        <?php
+          wp_nav_menu(array(
+            'theme_location' => 'menu_right',
+            'items_wrap' => '%3$s'
+          ));
+        ?>
+
       </nav>
+
     </header>

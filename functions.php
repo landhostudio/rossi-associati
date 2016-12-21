@@ -15,7 +15,8 @@
 			// Enables dynamic navigation --------------------------------------------
 
       register_nav_menus( array(
-				'menu' => 'Menu'
+				'menu_left' => 'Menu a sinistra',
+        'menu_right' => 'Menu a destra'
 			));
 
       // Load the assets -------------------------------------------------------
