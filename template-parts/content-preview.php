@@ -1,6 +1,6 @@
 <article class="preview">
   <a rel="bookmark" href="<?php the_permalink(); ?>">
-    <h2><?php the_title(); ?></h2>
+    <h3><?php the_title(); ?></h3>
     <?php the_post_thumbnail(); ?>
     <?php the_excerpt(); ?>
   </a>
