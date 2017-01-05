@@ -1,4 +1,3 @@
-<article>
-  <h2><?php esc_html_e('No content', 'horoman'); ?></h2>
-  <p><?php esc_html_e('There is no content to view.', 'horoman'); ?></p>
+  <h2><?php esc_html_e('Contenuto non esiste', 'rossi-associati'); ?></h2>
+  <p><?php esc_html_e('Non ci sono i contenuti da visualizzare.', 'rossi-associati'); ?></p>
 </article>
