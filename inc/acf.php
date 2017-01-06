@@ -43,6 +43,11 @@ acf_add_local_field_group(array (
 				'operator' => '==',
 				'value' => 'top_level',
 			),
+			array (
+				'param' => 'page_type',
+				'operator' => '!=',
+				'value' => 'posts_page',
+			),
 		),
 		array (
 			array (
@@ -50,12 +55,22 @@ acf_add_local_field_group(array (
 				'operator' => '==',
 				'value' => 'parent',
 			),
+			array (
+				'param' => 'page_type',
+				'operator' => '!=',
+				'value' => 'posts_page',
+			),
 		),
 		array (
 			array (
 				'param' => 'page_type',
 				'operator' => '==',
 				'value' => 'child',
+			),
+			array (
+				'param' => 'page_type',
+				'operator' => '!=',
+				'value' => 'posts_page',
 			),
 		),
 	),
