@@ -14,7 +14,7 @@
 
       <nav role="navigation">
 
-        <h2 class="hidden"><?php esc_html_e('Navigation', 'rossi-associati'); ?></h2>
+        <h2 class="hidden"><?php esc_html_e('Menu', 'rossi-associati'); ?></h2>
 
         <ul id="menu-menu-al-centro" class="menu">
           <li class="menu-item menu-logo">
