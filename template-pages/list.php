@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: List
+ * Template Name: Lista
  */
 get_header(); ?>
 
