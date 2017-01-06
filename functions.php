@@ -42,6 +42,10 @@
       
       get_template_part('inc/comments');
       
+      // Advanced Custom Fields ------------------------------------------------
+      
+      get_template_part('inc/acf');
+      
     }
 
   }
