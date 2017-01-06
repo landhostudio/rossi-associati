@@ -31,6 +31,10 @@
 			}
 			add_action('wp_enqueue_scripts', 'init_assets');
       
+      // Content Width ---------------------------------------------------------
+      
+      if (!isset($content_width)) $content_width = 1280;
+
       // Soil ------------------------------------------------------------------
       
       add_theme_support('soil-clean-up');
