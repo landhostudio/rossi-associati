@@ -13,6 +13,63 @@ if (function_exists('acf_add_options_page')) {
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
+	'key' => 'group_586eeb6669ded',
+	'title' => 'Pagina',
+	'fields' => array (
+		array (
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'key' => 'field_586eeb944f7a8',
+			'label' => 'Sottotitolo',
+			'name' => 'page_subtitle',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'top_level',
+			),
+		),
+		array (
+			array (
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'parent',
+			),
+		),
+		array (
+			array (
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'child',
+			),
+		),
+	),
+	'menu_order' => -1,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_586ee8056e325',
 	'title' => 'Contatti',
 	'fields' => array (
