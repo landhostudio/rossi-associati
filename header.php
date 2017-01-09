@@ -9,11 +9,9 @@
   <body>
 
     <header role="banner">
-
       <h1 class="hidden"><?php bloginfo('name'); ?></h1>
 
       <nav role="navigation">
-
         <h2 class="hidden"><?php esc_html_e('Menu', 'rossi-associati'); ?></h2>
 
         <ul id="menu-menu-al-centro" class="menu">
@@ -24,9 +22,10 @@
           </li>
         </ul>
 
-        <?php wp_nav_menu(array('theme_location' => 'menu_left')); ?>
-        <?php wp_nav_menu(array('theme_location' => 'menu_right')); ?>
-
+        <?php if (has_nav_menu('menu')): ?>
+          <?php wp_nav_menu(array('theme_location' => 'menu_left')); ?>
+          <?php wp_nav_menu(array('theme_location' => 'menu_right')); ?>
+        <?php endif; ?>
       </nav>
 
     </header>
