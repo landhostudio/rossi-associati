@@ -23,9 +23,9 @@
 			
 			function init_assets() {
 
-        wp_enqueue_style('all-css', get_template_directory_uri() . '/dist/css/all.css', array(), '1.0.0', 'all-css');
+        wp_enqueue_style('all-css', get_template_directory_uri() . '/dist/css/all.css', true, true);
 
-        wp_register_script('all-js', get_template_directory_uri() . '/dist/js/all.js', array(), '1.0.0', 'all-js');
+        wp_register_script('all-js', get_template_directory_uri() . '/dist/js/all.js', array(), '1.3', true);
         wp_enqueue_script('all-js');
 
 			}
