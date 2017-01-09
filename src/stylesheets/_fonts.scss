@@ -1,0 +1,57 @@
+// Body ------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Taviraj ExtraLight'), local('Taviraj-ExtraLight'),
+       url('../webfonts/taviraj-v1-latin-200.woff2') format('woff2'),
+       url('../webfonts/taviraj-v1-latin-200.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Taviraj ExtraLight Italic'), local('Taviraj-ExtraLightItalic'),
+       url('../webfonts/taviraj-v1-latin-200italic.woff2') format('woff2'),
+       url('../webfonts/taviraj-v1-latin-200italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Taviraj Light'), local('Taviraj-Light'),
+       url('../webfonts/taviraj-v1-latin-300.woff2') format('woff2'),
+       url('../webfonts/taviraj-v1-latin-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Taviraj'), local('Taviraj-Regular'),
+       url('../webfonts/taviraj-v1-latin-regular.woff2') format('woff2'),
+       url('../webfonts/taviraj-v1-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Taviraj Medium'), local('Taviraj-Medium'),
+       url('../webfonts/taviraj-v1-latin-500.woff2') format('woff2'),
+       url('../webfonts/taviraj-v1-latin-500.woff') format('woff');
+}
+
+// Headings --------------------------------------------------------------------
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cormorant Garamond Bold'), local('CormorantGaramond-Bold'),
+       url('../webfonts/cormorant-garamond-v1-latin-700.woff2') format('woff2'),
+       url('../webfonts/cormorant-garamond-v1-latin-700.woff') format('woff');
+}
