@@ -1,0 +1,45 @@
+.h1
+  @extend h1
+
+.h2
+  @extend h2
+
+.h3
+  @extend h3
+
+.h4
+  @extend h4
+
+.h5
+  @extend h5
+
+.h6
+  @extend h6
+
+.weight-200
+  font-weight: 200
+
+.weight-300
+  font-weight: 300
+
+.weight-400
+  font-weight: 400
+
+.weight-500
+  font-weight: 500
+
+.hidden
+  position: absolute
+  left: -999em
+
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-right: $padding
+  padding-left: $padding
+  
+  @include media($screen-sm-min)
+    max-width: $screen-sm-min
+
+  @include media($screen-md-min)
+    max-width: $screen-md-min
