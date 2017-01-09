@@ -22,8 +22,11 @@
           </li>
         </ul>
 
-        <?php if (has_nav_menu('menu')): ?>
+        <?php if (has_nav_menu('menu_left')): ?>
           <?php wp_nav_menu(array('theme_location' => 'menu_left')); ?>
+        <?php endif; ?>
+
+        <?php if (has_nav_menu('menu_right')): ?>
           <?php wp_nav_menu(array('theme_location' => 'menu_right')); ?>
         <?php endif; ?>
       </nav>
