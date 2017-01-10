@@ -1,9 +1,21 @@
 <article class="page">
-  <?php if (get_field('page_subtitle')): ?>
-    <h2><?php the_field('page_subtitle'); ?></h2>
-  <?php else: ?>
-    <h2><?php the_title(); ?></h2>
-  <?php endif; ?>
-  <?php the_post_thumbnail(); ?>
-  <?php the_content(); ?>
+  <div class="page__cover">
+    <div class="page__container">
+      <div class="page__image">
+        <?php the_post_thumbnail(); ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="page__content">
+    <div class="container">
+      <?php if (get_field('page_subtitle')): ?>
+        <h2 class="page__title"><?php the_field('page_subtitle'); ?></h2>
+      <?php else: ?>
+        <h2 class="page__title"><?php the_title(); ?></h2>
+      <?php endif; ?>
+
+      <?php the_content(); ?>
+    </div>
+  </div>
 </article>

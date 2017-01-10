@@ -1,0 +1,63 @@
+.page
+  margin-top: em-calc(52)
+
+  @include media($screen-sm-min)
+    margin-top: em-calc(110)
+
+  &__cover
+    @extend .container
+    padding-left: 0
+    padding-right: 0
+
+  &__container
+    position: relative
+    overflow: hidden
+    width: 100%
+    padding-bottom: 56.25%
+
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    img
+      position: absolute
+      top: 50%
+      width: 100%
+      transform: translateY(-50%)
+  
+  &__content
+    .container
+
+      @include media($screen-sm-min)
+        column-count: 2
+        column-gap: ($padding * 2)
+        
+        h1, h2, h3, h4, h5, h6
+          column-span: all
+
+        p, ul, ol
+          line-height: ($line-height * 1.125)
+        
+        ul, ol
+          padding-left: em-calc(20)
+
+        p
+          margin: 0
+
+          + p
+              margin-top: $padding
+              margin-bottom: $padding
+
+      a
+        color: $color-1
+
+  &__title
+    font-size: em-calc(32)
+    color: $color-3
+    border-bottom: 1px solid
+
+    @include media($screen-sm-min)
+      font-size: em-calc(48)
