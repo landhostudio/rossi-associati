@@ -1,0 +1,28 @@
+.contact
+  &__locations
+    @extend .container
+
+    @include media($screen-sm-min)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__location
+    margin-bottom: em-calc(24)
+
+    @include media($screen-sm-min)
+      flex-basis: 50%
+      margin-bottom: em-calc(36)
+
+    h3
+      font-family: $font-family-1
+      font-size: em-calc(12)
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-top: 0
+      margin-bottom: em-calc(8)
+
+    p
+      @include media(max-width $screen-sm-max)
+        margin-top: 0
