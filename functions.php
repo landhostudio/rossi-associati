@@ -46,6 +46,10 @@
       // Comments and trackbacks -----------------------------------------------
       
       get_template_part('inc/comments');
+
+      // Menu walker -----------------------------------------------------------
+      
+      get_template_part('inc/menu');
       
       // Advanced Custom Fields ------------------------------------------------
       

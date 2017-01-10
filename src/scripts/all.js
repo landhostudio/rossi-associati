@@ -6,11 +6,13 @@ $(function () {
   'use strict';
   
   var init = function () {
-    initTest();
+    initHeader();
   };
-  
-  function initTest() {
-    console.log('rossi-associati');
+
+  function initHeader() {
+    $('.toggle').click(function(event) {
+      $('.header').toggleClass('header--opened');
+    });
   };
 
   init();

@@ -1,0 +1,125 @@
+.header
+  position: fixed
+  z-index: 9
+  top: 0
+  left: 0
+  width: 100%
+  transition: background 150ms
+  background-color: $color-2
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.2)
+
+  .container
+    padding-top: ($padding / 1.5)
+    padding-bottom: ($padding / 1.5)
+
+    @include media(max-width $screen-sm-max)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+
+    @include media($screen-sm-min)
+      padding-top: $padding
+      padding-bottom: $padding
+
+  &__title
+    @include media(max-width $screen-sm-max)
+      font-size: em-calc(16)
+      font-weight: normal
+      line-height: 0
+      margin-top: 0
+      margin-bottom: 0
+
+    @include media($screen-sm-min)
+      position: absolute
+      left: -999em
+
+    svg
+      @include media(max-width $screen-sm-max)
+        width: em-calc(22)
+        height: em-calc(22)
+
+  &__menu
+    @include media(max-width $screen-sm-max)
+      
+    @include media($screen-sm-min)
+      display: none
+
+  &__nav
+    @include media(max-width $screen-sm-max)
+      flex-basis: 100%
+      height: 0
+      opacity: 0
+      overflow: hidden
+      visibility: hidden
+      transition: opacity 500ms
+
+      .header--opened &
+        opacity: 1
+        visibility: visible
+        height: auto
+
+  .nav
+    &__items
+      list-style: none
+      margin-top: 0
+      margin-bottom: 0
+      padding-left: 0
+
+      @include media(max-width $screen-sm-max)
+        margin-top: ($padding / 2.5)
+        margin-left: - $padding
+        padding-right: - $padding
+
+      @include media($screen-sm-min)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+
+    &__item
+      @include media($screen-sm-min)
+        align-self: flex-start
+        margin-top: ($padding / 2)
+
+        &:nth-child(2)
+          order: 1
+        &:nth-child(3)
+          order: 2
+        &:nth-child(4)
+          order: 4
+        &:nth-child(5)
+          order: 5
+
+      &--logo
+        @include media(max-width $screen-sm-max)
+          display: none
+
+        @include media($screen-sm-min)
+          align-self: center
+          order: 3
+          margin-top: 0
+        
+        svg
+          @include media($screen-sm-min)
+            width: em-calc(150)
+            height: em-calc(76)
+
+      a
+        font-weight: 400
+        text-transform: uppercase
+        text-decoration: none
+        color: $color-1
+        transition: color 150ms
+
+        @include media(max-width $screen-sm-max)
+          display: block
+          padding: ($padding / 1.5) $padding
+        
+        &:focus,
+        &:hover
+          color: $color-4
+
+      &--active
+        a
+          color: $color-4
