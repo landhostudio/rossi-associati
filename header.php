@@ -37,6 +37,7 @@
           <h2 class="hidden"><?php esc_html_e('Navigation', 'rossi-associati'); ?></h2>
 
           <ul class="nav__items">
+            <li class="nav__item nav__item--divider"></li>
             <li class="nav__item nav__item--logo">
               <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
                 <span class="hidden"><?php bloginfo('name'); ?></span>
