@@ -23,29 +23,8 @@
       width: 100%
       transform: translateY(-50%)
   
-  &__content
-    .container
-
-      @include media($screen-sm-min)
-        column-count: 2
-        column-gap: ($padding * 2)
-        
-        h1, h2, h3, h4, h5, h6
-          column-span: all
-
-        p, ul, ol
-          line-height: ($line-height * 1.125)
-        
-        ul, ol
-          padding-left: em-calc(20)
-
-        p
-          margin: 0
-
-          + p
-              margin-top: $padding
-              margin-bottom: $padding
-
+  &__body
+    
 
   &__title
     font-size: em-calc(32)
@@ -54,3 +33,24 @@
 
     @include media($screen-sm-min)
       font-size: em-calc(48)
+
+  &__content
+    @include media($screen-sm-min)
+      column-count: 2
+      column-gap: ($padding * 2)
+      
+      h1, h2, h3, h4, h5, h6
+        column-span: all
+
+      p, ul, ol
+        line-height: ($line-height * 1.125)
+      
+      ul, ol
+        padding-left: em-calc(20)
+
+      p
+        margin: 0
+
+        + p
+            margin-top: $padding
+            margin-bottom: $padding

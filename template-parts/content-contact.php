@@ -7,15 +7,13 @@
     </div>
   </div>
 
-  <div class="page__content">
+  <div class="page__body">
     <div class="container">
       <?php if (get_field('page_subtitle')): ?>
         <h2 class="page__title"><?php the_field('page_subtitle'); ?></h2>
       <?php else: ?>
         <h2 class="page__title"><?php the_title(); ?></h2>
       <?php endif; ?>
-
-      <?php the_content(); ?>
     </div>
 
     <?php if (have_rows('contact_locations')): ?>

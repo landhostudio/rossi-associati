@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="page__content">
+  <div class="page__body">
     <div class="container">
       <?php if (get_field('page_subtitle')): ?>
         <h2 class="page__title"><?php the_field('page_subtitle'); ?></h2>
@@ -15,7 +15,9 @@
         <h2 class="page__title"><?php the_title(); ?></h2>
       <?php endif; ?>
 
-      <?php the_content(); ?>
+      <div class="page__content">
+        <?php the_content(); ?>
+      </div>
     </div>
   </div>
 </article>
