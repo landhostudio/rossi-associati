@@ -1,4 +1,5 @@
 //=include ../../bower_components/jquery/dist/jquery.js
+//=include ../../bower_components/imagesloaded/imagesloaded.pkgd.js
 //=include ../../bower_components/fastclick/lib/fastclick.js
 
 $(function () {
@@ -7,12 +8,20 @@ $(function () {
   
   var init = function () {
     initHeader();
+    initImages();
     initList();
   };
 
   function initHeader() {
     $('.toggle').click(function(event) {
       $('.header').toggleClass('header--opened');
+    });
+  };
+
+  function initImages() {
+    $('.page__cover').imagesLoaded().done(function(instance) {
+      console.log('cover is loaded');
+      $('.page__image img').addClass('loaded');
     });
   };
 
