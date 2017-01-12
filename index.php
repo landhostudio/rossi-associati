@@ -12,7 +12,11 @@
 
     <div class="page__body">
       <div class="container">
-        <h2 class="page__title"><?php esc_html_e('News', 'rossi-associati'); ?></h2>
+        <?php if (is_category()): ?>
+          <h2 class="page__title"><?php single_cat_title(); ?></h2>
+        <?php else: ?>
+          <h2 class="page__title"><?php esc_html_e('News', 'rossi-associati'); ?></h2>
+        <?php endif; ?>
 
         <div class="page__items">
           <?php while (have_posts()): the_post(); ?>
