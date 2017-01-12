@@ -1,4 +1,4 @@
-<article class="preview">
+<article class="page__item">
   <a rel="bookmark" href="<?php the_permalink(); ?>">
     <h3><?php the_title(); ?></h3>
     <?php the_post_thumbnail(); ?>

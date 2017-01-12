@@ -56,3 +56,35 @@
         + p
             margin-top: $padding
             margin-bottom: $padding
+
+  &__items
+    @include media($screen-sm-min)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+  
+  &__item
+    @include media($screen-sm-min)
+      flex-basis: 50%
+      margin-top: em-calc(36)
+
+      &:nth-child(even)
+        padding-left: ($padding * 2)
+
+      &:nth-child(odd)
+        padding-right: ($padding * 2)
+
+      &:nth-of-type(1),
+      &:nth-of-type(2)
+        margin-top: 0
+
+    a
+      text-decoration: none
+
+    h3
+      font-family: $font-family-1
+      font-size: em-calc(12)
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-bottom: em-calc(8)
