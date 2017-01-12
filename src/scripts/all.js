@@ -28,6 +28,8 @@ $(function () {
       $('.list__item').removeClass('list__item--active');
       $('.list__item' + list_id).addClass('list__item--active');
 
+      event.preventDefault();
+
     });
 
     var hash = $.trim(window.location.hash);

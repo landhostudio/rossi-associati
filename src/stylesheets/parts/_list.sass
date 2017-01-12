@@ -1,0 +1,53 @@
+.page--list
+  .page__title
+    margin-bottom: em-calc(8)
+
+.list
+  &__body
+    @include media($screen-sm-min)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__nav,
+  &__items
+    @include media($screen-sm-min)
+      flex-basis: 50%
+
+  &__nav
+    ol
+      padding-left: em-calc(18)
+
+      + ol
+        margin-top: em-calc(24)
+
+        @include media($screen-sm-min)
+          margin-top: em-calc(48)
+
+    a
+      text-decoration: none
+
+  &__element
+    &--title
+      font-size: em-calc(12)
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 1px
+      margin-bottom: em-calc(8)
+
+    &--active
+      a
+        font-weight: 400
+
+  &__items
+    
+
+  &__item
+    @extend .hidden
+
+    &--active
+      position: inherit
+      left: inherit
+
+      @include media(max-width $screen-sm-max)
+        padding-top: em-calc(16)
