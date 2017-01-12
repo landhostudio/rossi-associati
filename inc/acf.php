@@ -92,7 +92,6 @@ acf_add_local_field_group(array (
 	'instruction_placement' => 'label',
 	'hide_on_screen' => array (
 		0 => 'the_content',
-		1 => 'featured_image',
 	),
 	'active' => 1,
 	'description' => '',
