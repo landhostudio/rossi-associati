@@ -20,7 +20,6 @@ $(function () {
 
   function initImages() {
     $('.page__cover').imagesLoaded().done(function(instance) {
-      console.log('cover is loaded');
       $('.page__image img').addClass('loaded');
     });
   };
