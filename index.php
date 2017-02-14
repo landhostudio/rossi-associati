@@ -2,13 +2,16 @@
 
 <?php if (have_posts()): ?>
   <section class="page page--news">
-    <div class="page__cover">
-      <div class="page__container">
-        <div class="page__image">
-          <?php the_post_thumbnail(); ?>
+    
+    <?php if (has_post_thumbnail()): ?>
+      <div class="page__cover">
+        <div class="page__container">
+          <div class="page__image">
+            <?php the_post_thumbnail(); ?>
+          </div>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
 
     <div class="page__body">
       <div class="container">
