@@ -36,9 +36,10 @@ $(function () {
       $('.list__item').removeClass('list__item--active');
       $('.list__item' + list_id).addClass('list__item--active');
 
+      $('html, body').stop();
       $('html, body').animate({
         scrollTop: $('.page__body').offset().top
-      }, 2000 );
+      }, 1000 );
 
       event.preventDefault();
 
