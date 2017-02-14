@@ -1,16 +1,13 @@
 .page
-  &__cover
-    @extend .container
-
-    @include media(max-width $screen-sm-max)
-      padding-left: 0
-      padding-right: 0
 
   &__container
     position: relative
     overflow: hidden
     width: 100%
     padding-bottom: 56.25%
+    
+    @include media($screen-sm-min)
+      padding-bottom: (56.25% / 1.5)
 
   &__image
     position: absolute
