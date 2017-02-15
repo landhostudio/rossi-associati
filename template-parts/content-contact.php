@@ -1,4 +1,4 @@
-<article class="page page--contact">
+<article class="page page--contact page--alternative">
   <?php if (has_post_thumbnail()): ?>
     <div class="page__cover">
       <div class="page__container">
