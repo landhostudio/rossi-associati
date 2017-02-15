@@ -2,39 +2,47 @@
   width: 100%
 
   .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
     padding-top: ($padding / 1.5)
     padding-bottom: ($padding / 1.5)
-
-    @include media(max-width $screen-sm-max)
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
-      align-items: center
 
     @include media($screen-sm-min)
       padding-top: $padding
       padding-bottom: $padding
 
   &__title
-    @include media(max-width $screen-sm-max)
-      font-size: em-calc(16)
-      font-weight: normal
-      line-height: 0
-      margin-top: 0
-      margin-bottom: 0
+    font-size: em-calc(16)
+    font-weight: normal
+    line-height: 0
+    margin-top: 0
+    margin-bottom: 0
 
-    @include media($screen-sm-min)
-      position: absolute
-      left: -999em
+    .small
 
-    svg
       @include media(max-width $screen-sm-max)
         width: em-calc(22)
         height: em-calc(22)
 
+      @include media($screen-sm-min)
+        display: none
+
+    .large
+
+      @include media(max-width $screen-sm-max)
+        display: none
+
+      @include media($screen-sm-min)
+        width: em-calc(295)
+        height: em-calc(52)
+
+      @include media($screen-md-min)
+        width: em-calc(352)
+        height: em-calc(62)
+
   &__menu
-    @include media(max-width $screen-sm-max)
-      
     @include media($screen-sm-min)
       display: none
 
@@ -63,25 +71,10 @@
         margin-left: - $padding
         margin-right: - $padding
 
-      @include media($screen-sm-min)
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        align-items: center
-
     &__item
       @include media($screen-sm-min)
-        align-self: flex-start
-        margin-top: ($padding / 2)
-
-        &:nth-child(3)
-          order: 1
-        &:nth-child(4)
-          order: 2
-        &:nth-child(5)
-          order: 4
-        &:nth-child(6)
-          order: 5
+        display: inline-block
+        margin-left: ($padding * 1.5)
 
       &--divider
         @include media(max-width $screen-sm-max)
@@ -94,27 +87,13 @@
         @include media($screen-sm-min)
           display: none
 
-      &--logo
-        @include media(max-width $screen-sm-max)
-          display: none
-
-        @include media($screen-sm-min)
-          align-self: center
-          order: 3
-          margin-top: 0
-        
-        svg
-          @include media($screen-sm-min)
-            width: em-calc(150)
-            height: em-calc(76)
-
       a
+        display: block
         text-decoration: none
         color: $color-1
         transition: color 150ms
 
         @include media(max-width $screen-sm-max)
-          display: block
           padding: ($padding / 1.5) $padding
         
         &:focus,
