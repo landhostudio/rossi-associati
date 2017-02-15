@@ -63,9 +63,9 @@ gulp.task('css', function() {
 // Scripts ---------------------------------------------------------------------
 
 gulp.task('js', function() {
-  return gulp.src([source + '/scripts/all.js'])
+  return gulp.src([source + '/scripts/**/*.js'])
     .pipe(include())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(destination + '/js'))
     .pipe(browserSync.stream());
 });
