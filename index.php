@@ -7,7 +7,7 @@
       <div class="page__cover">
         <div class="page__container">
           <div class="page__image">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('large'); ?>
           </div>
         </div>
       </div>
