@@ -5,6 +5,9 @@
   var init = function () {
     initHeader();
     initImages();
+    if ($('.carousel').length) {
+      initCarousel();
+    }
     initList();
   };
 
@@ -18,6 +21,34 @@
     $('.page__cover').imagesLoaded().done(function(instance) {
       $('.page__image img').addClass('loaded');
     });
+    $('.carousel__container').imagesLoaded().done(function(instance) {
+      $('.carousel__cell img').addClass('loaded');
+    });
+  };
+
+  function initCarousel() {
+    
+    var $carousel = $('.carousel__container').flickity({
+      contain: false,
+      autoPlay: 7500,
+      pauseAutoPlayOnHover: false,
+      percentPosition: true,
+      prevNextButtons: false,
+      pageDots: false,
+      resize: false, // false if carousel uses per.height
+      setGallerySize: false, // false if carousel uses per.height
+      wrapAround: true // infinite loop
+    });
+    
+    $carousel.on('mouseenter', function() {
+      $carousel.on('mouseleave', onNavMouseleave);
+    });
+
+    function onNavMouseleave() {
+      $carousel.flickity('playPlayer');
+      $carousel.off('mouseleave', onNavMouseleave);
+    };
+    
   };
 
   function initList() {

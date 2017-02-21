@@ -1,5 +1,15 @@
 <article class="page page--contact">
-  <?php if (has_post_thumbnail()): ?>
+  <?php if (have_rows('page_gallery')): ?>
+    <div class="carousel">
+      <div class="carousel__container">
+        <?php while (have_rows('page_gallery')) : the_row(); ?>
+          <div class="carousel__cell">
+            <?php echo wp_get_attachment_image(get_sub_field('page_gallery_image'), 'large', false, array()); ?>
+          </div>
+        <?php endwhile; ?>
+      </div>
+    </div>
+  <?php elseif (has_post_thumbnail()): ?>
     <div class="page__cover">
       <div class="page__container">
         <div class="page__image">
