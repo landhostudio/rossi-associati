@@ -30,7 +30,7 @@
     
     var $carousel = $('.carousel__container').flickity({
       contain: false,
-      autoPlay: 7500,
+      autoPlay: 4000,
       pauseAutoPlayOnHover: false,
       percentPosition: true,
       prevNextButtons: false,
