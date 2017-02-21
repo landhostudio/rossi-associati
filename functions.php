@@ -21,7 +21,7 @@
       // Load the assets -------------------------------------------------------
 			
       function init_assets() {
-        wp_enqueue_style('css', get_template_directory_uri() . '/dist/css/all.css', array(), '1.1.0');
+        wp_enqueue_style('css', get_template_directory_uri() . '/dist/css/all.css', array(), '1.2.0');
         wp_enqueue_script('plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), '1.1.0', true);
         wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), '1.1.1', true);
 			}
