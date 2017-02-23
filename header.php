@@ -82,7 +82,7 @@
         </div>
 
         <nav role="navigation" class="header__nav">
-          <h2 class="hidden"><?php esc_html_e('Navigation', 'rossi-associati'); ?></h2>
+          <h2 class="hidden"><?php esc_html_e('Navigazione', 'rossi-associati'); ?></h2>
 
           <ul class="nav__items">
             <li class="nav__item nav__item--divider"></li>
