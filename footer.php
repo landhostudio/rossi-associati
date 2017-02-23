@@ -13,7 +13,7 @@
           <div class="cookies__buttons">
 
             <?php if (get_field('options_cookies_link_type', option)): ?>
-              <a href="<?php the_field('options_cookies_link_external', option) ?>" class="button button--alternative" target="_blank" rel="nofollow"><?php esc_html_e('Leggi di più', 'rossi-associati'); ?></a>
+              <a href="<?php the_field('options_cookies_link_external', option) ?>" class="button button--alternative" target="_blank" rel="nofollow"><?php esc_html_e('Approfondisci', 'rossi-associati'); ?></a>
             <?php else: ?>
               <a href="<?php the_field('options_cookies_link_intern', option) ?>" class="button button--alternative"><?php esc_html_e('Approfondisci', 'rossi-associati'); ?></a>
             <?php endif; ?>
