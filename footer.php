@@ -4,6 +4,27 @@
       </div>
     </footer>
 
+    <?php if (get_field('options_cookies_message', option)): ?>
+      <div class="cookies">
+        <div class="container">
+          <div class="cookies__message">
+            <p><?php the_field('options_cookies_message', option) ?></p>
+          </div>
+          <div class="cookies__buttons">
+
+            <?php if (get_field('options_cookies_link_type', option)): ?>
+              <a href="<?php the_field('options_cookies_link_external', option) ?>" class="button button--alternative" target="_blank" rel="nofollow"><?php esc_html_e('Leggi di più', 'rossi-associati'); ?></a>
+            <?php else: ?>
+              <a href="<?php the_field('options_cookies_link_intern', option) ?>" class="button button--alternative"><?php esc_html_e('Approfondisci', 'rossi-associati'); ?></a>
+            <?php endif; ?>
+
+            <button type="button" class="button button--accept"><?php esc_html_e('Accetta', 'rossi-associati'); ?></button>
+
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+
     <?php wp_footer(); ?>
 
     <script>

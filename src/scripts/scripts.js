@@ -9,6 +9,9 @@
       initCarousel();
     }
     initList();
+    if ($('.cookies').length) {
+      initCookies();
+    }
   };
 
   function initHeader() {
@@ -74,6 +77,29 @@
 
     var hash = $.trim(window.location.hash);
     if (hash) $('.list__element a[href$="'+hash+'"]').trigger('click');
+
+  };
+
+  function initCookies() {
+    
+    var cookie = Cookies.get('rossieassociati-cookies-accepted');
+
+    if (cookie == 1) {
+
+      $('.cookies').removeClass('cookies--not-accepted');
+
+    } else {
+
+      Cookies.set('rossieassociati-cookies-accepted', '0', {expires: 365});
+
+      $('.cookies').addClass('cookies--not-accepted');
+
+      $('.cookies .button--accept').click(function(event) {
+        $('.cookies').removeClass('cookies--not-accepted');
+        Cookies.set('rossieassociati-cookies-accepted', '1', {expires: 365});
+      });
+
+    };
 
   };
 

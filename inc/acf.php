@@ -413,6 +413,114 @@ acf_add_local_field_group(array (
 				'id' => '',
 			),
 		),
+		array (
+			'placement' => 'top',
+			'endpoint' => 0,
+			'key' => 'field_58aec145913d5',
+			'label' => 'Cookies',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+		array (
+			'default_value' => '',
+			'new_lines' => 'br',
+			'maxlength' => '',
+			'placeholder' => '',
+			'rows' => 3,
+			'key' => 'field_58aec11c913d4',
+			'label' => 'Avviso',
+			'name' => 'options_cookies_message',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+		array (
+			'default_value' => 1,
+			'message' => 'Esterno?',
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+			'key' => 'field_58aed4a07526c',
+			'label' => 'Link',
+			'name' => 'options_cookies_link_type',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+		array (
+			'post_type' => array (
+				0 => 'page',
+			),
+			'taxonomy' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'allow_archives' => 0,
+			'key' => 'field_58aed4e87526d',
+			'label' => 'Interno',
+			'name' => 'options_cookies_link_intern',
+			'type' => 'page_link',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_58aed4a07526c',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
+		array (
+			'default_value' => '',
+			'placeholder' => '',
+			'key' => 'field_58aed5467526e',
+			'label' => 'Esterno',
+			'name' => 'options_cookies_link_external',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_58aed4a07526c',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+		),
 	),
 	'location' => array (
 		array (
@@ -431,7 +539,6 @@ acf_add_local_field_group(array (
 	'hide_on_screen' => '',
 	'active' => 1,
 	'description' => '',
-	'local' => 'php',
 ));
 
 endif;

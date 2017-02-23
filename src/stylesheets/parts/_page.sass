@@ -44,25 +44,39 @@
       font-size: em-calc(48)
 
   &__content
+
     @include media($screen-sm-min)
       column-count: 2
       column-gap: ($padding * 2)
       
-      h1, h2, h3, h4, h5, h6
+      h1, h2, h3, h4, h5, h6, ol, ul
         column-span: all
-
+  
       p, ul, ol
         line-height: ($line-height * 1.125)
       
       ul, ol
         padding-left: em-calc(20)
 
-      p
-        margin: 0
+    h3
+      margin-top: em-calc(24)
+      font-size: em-calc(24)
+      padding-bottom: em-calc(4)
+      border-bottom: rem-calc(1) solid rgba($color-4, 0.25)
 
-        + p
-            margin-top: $padding
-            margin-bottom: $padding
+    h4
+      font-size: em-calc(18)
+
+    li + li
+      margin-top: em-calc(16)
+
+    p
+      margin: 0
+
+      + p
+          margin-top: $padding
+          margin-bottom: $padding
+
 
   &__items
     @include media($screen-sm-min)
