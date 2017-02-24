@@ -8,11 +8,11 @@
     <?php wp_head(); ?>
     <?php get_template_part('inc/icons'); ?>
   </head>
-  <body>
+  <body itemscope itemtype="http://schema.org/WebPage">
 
-    <header role="banner" class="header">
+    <header role="banner" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="container">
-        <h1 class="header__title">
+        <h1 class="header__title" itemprop="headline">
           <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
             <span class="hidden"><?php bloginfo('name'); ?></span>
 
@@ -24,7 +24,6 @@
             </svg>
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 62" class="large">
-              <title>Logo</title>
               <g>
                 <g class="brand">
                   <path d="M44.91,53.09H36.26L20.8,32.1H15.56V29.86h4.31a15.33,15.33,0,0,0,4.65-.67,11.54,11.54,0,0,0,3.69-1.9,8.58,8.58,0,0,0,3.32-6.94,9.5,9.5,0,0,0-.7-3.67,8.59,8.59,0,0,0-2-2.88,8.87,8.87,0,0,0-3-1.88,10.4,10.4,0,0,0-3.69-.67V8.45h1.27a25.79,25.79,0,0,1,7,.86,14.83,14.83,0,0,1,5,2.42,10.3,10.3,0,0,1,3,3.68,10.69,10.69,0,0,1,1,4.67A9.67,9.67,0,0,1,38.83,24a10.72,10.72,0,0,1-2.22,3.27,14.23,14.23,0,0,1-3.45,2.53,18.3,18.3,0,0,1-4.44,1.65Z" style="fill: #234091"/>
@@ -73,15 +72,15 @@
         </h1>
 
         <div class="header__menu">
-          <button type="button" class="toggle">
+          <button type="button" class="toggle" aria-label="<?php esc_html_e('Menu', 'rossi-associati'); ?>">
             <span class="hidden"><?php esc_html_e('Menu', 'rossi-associati'); ?></span>
-            <span class="toggle__bar"></span>
-            <span class="toggle__bar"></span>
-            <span class="toggle__bar"></span>
+            <span class="toggle__bar" aria-hidden="true"></span>
+            <span class="toggle__bar" aria-hidden="true"></span>
+            <span class="toggle__bar" aria-hidden="true"></span>
           </button>
         </div>
 
-        <nav role="navigation" class="header__nav">
+        <nav role="navigation" class="header__nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <h2 class="hidden"><?php esc_html_e('Navigazione', 'rossi-associati'); ?></h2>
 
           <ul class="nav__items">

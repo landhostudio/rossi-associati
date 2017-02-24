@@ -1,4 +1,4 @@
-<article class="page page--list">
+<article class="page page--list" itemscope="itemscope" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
   <?php if (have_rows('page_gallery')): ?>
     <div class="carousel">
       <div class="carousel__container">
@@ -22,12 +22,12 @@
   <div class="page__body">
     <div class="container">
       <?php if (get_field('page_subtitle')): ?>
-        <h2 class="page__title"><?php the_field('page_subtitle'); ?></h2>
+        <h2 class="page__title" itemprop="headline"><?php the_field('page_subtitle'); ?></h2>
       <?php else: ?>
-        <h2 class="page__title"><?php the_title(); ?></h2>
+        <h2 class="page__title" itemprop="headline"><?php the_title(); ?></h2>
       <?php endif; ?>
 
-      <div class="list__body">
+      <div class="list__body" itemprop="description">
         <?php if (have_rows('list')): ?>
           <nav class="list__nav">
             <?php

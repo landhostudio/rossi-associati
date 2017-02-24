@@ -12,7 +12,7 @@ class walkerMenu extends Walker_Nav_Menu {
 			and $attributes .= ' title="' . esc_attr( $item->attr_title ) .'"';
 
 		! empty ( $item->url )
-			and $attributes .= ' href="' . esc_attr( $item->url ) .'"';
+			and $attributes .= ' href="' . esc_attr( $item->url ) .'" itemprop="url"';
 
 		$attributes  = trim( $attributes );
 		$title       = apply_filters( 'the_title', $item->title, $item->ID );
